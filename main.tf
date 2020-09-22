@@ -1,7 +1,7 @@
 resource "digitalocean_kubernetes_cluster" "this" {
   name     = "${var.projectname}-k8s"
   region   = var.region
-  version  = var.version
+  version  = var.k8s_version
   vpc_uuid = var.vpc_uuid
 
   node_pool {
